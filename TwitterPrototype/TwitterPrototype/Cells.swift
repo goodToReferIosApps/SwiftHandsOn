@@ -65,7 +65,7 @@ class UserCell: DatasourceCell {
     }()
     
     override func setupViews() {
-        super.setupViews()
+        super.setupViews() 
         
         addSubview(profileImageView)
         addSubview(nameLabel)
