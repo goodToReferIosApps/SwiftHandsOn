@@ -10,6 +10,7 @@
 		B36323111F9524E900EBB2EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36323101F9524E900EBB2EF /* User.swift */; };
 		B36323131F952E0000EBB2EF /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36323121F952E0000EBB2EF /* UserCell.swift */; };
 		B36323151F954ECE00EBB2EF /* HomeDatasourceController+setupNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36323141F954ECE00EBB2EF /* HomeDatasourceController+setupNavBar.swift */; };
+		B36323171F9556FB00EBB2EF /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36323161F9556FB00EBB2EF /* TweetCell.swift */; };
 		B37695141F82CEFE0051E934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37695131F82CEFE0051E934 /* AppDelegate.swift */; };
 		B376951B1F82CEFE0051E934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B376951A1F82CEFE0051E934 /* Assets.xcassets */; };
 		B376951E1F82CEFE0051E934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B376951C1F82CEFE0051E934 /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		B36323101F9524E900EBB2EF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B36323121F952E0000EBB2EF /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B36323141F954ECE00EBB2EF /* HomeDatasourceController+setupNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+setupNavBar.swift"; sourceTree = "<group>"; };
+		B36323161F9556FB00EBB2EF /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		B37695101F82CEFE0051E934 /* TwitterPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37695131F82CEFE0051E934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B376951A1F82CEFE0051E934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				B3D338F51F842FC4005C0DBA /* UserHeaderFooter.swift */,
 				B36323121F952E0000EBB2EF /* UserCell.swift */,
+				B36323161F9556FB00EBB2EF /* TweetCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				B37695141F82CEFE0051E934 /* AppDelegate.swift in Sources */,
 				B3D338F81F843000005C0DBA /* HomeDatasource.swift in Sources */,
 				B37695261F82D0380051E934 /* HomeController.swift in Sources */,
+				B36323171F9556FB00EBB2EF /* TweetCell.swift in Sources */,
 				B3D338F61F842FC4005C0DBA /* UserHeaderFooter.swift in Sources */,
 				B36323111F9524E900EBB2EF /* User.swift in Sources */,
 			);
