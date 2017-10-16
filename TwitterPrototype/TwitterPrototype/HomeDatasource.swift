@@ -11,10 +11,11 @@ import LBTAComponents
 class HomeDatasource: Datasource {
     
     let users: [User] = {
-        let brian = User(name: "Brian", username: "@brian", bioText: "This is biotext of brian", profileImage: #imageLiteral(resourceName: "profile_image"))
-        let ray = User(name: "Ray", username: "@ray", bioText: "This is ray, checkout the latest videos for swift programming samples.", profileImage: #imageLiteral(resourceName: "ray_profile_image"))
+        let brian = User(name: "Brian", username: "@brian", bioText: "This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian ", profileImage: #imageLiteral(resourceName: "profile_image"))
+        let ray = User(name: "Ray", username: "@ray", bioText: "This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples.", profileImage: #imageLiteral(resourceName: "ray_profile_image"))
+        let kindleCourse = User(name: "Kindle", username: "@kindle", bioText: "This is kindle biotext", profileImage: #imageLiteral(resourceName: "profile_image"))
         
-        return [brian, ray]
+        return [brian, ray, kindleCourse]
     }()
     
     
