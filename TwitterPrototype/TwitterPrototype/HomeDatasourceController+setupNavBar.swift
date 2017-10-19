@@ -16,8 +16,8 @@ extension HomeDatasourceController {
     }
     
     private func setupRemainingNavItems() {
+        
         let titleImageView = UIImageView(image: #imageLiteral(resourceName: "title_icon"))
-        titleImageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView
         navigationController?.navigationBar.backgroundColor = .white

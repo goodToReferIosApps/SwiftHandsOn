@@ -18,7 +18,19 @@ class HomeDatasource: Datasource {
         return [brian, ray, kindleCourse]
     }()
     
-    let tweets = ["Tweet1", "tweet"]
+    let tweets: [Tweet] = {
+        let brian = User(name: "Brian", username: "@brian", bioText: "This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian ", profileImage: #imageLiteral(resourceName: "profile_image"))
+        let tweet = Tweet(user: brian, message: "This is 9th episode of build that app.This is 9th episode of build that app.This is 9th episode of build that app.This is 9th episode of build that app.This is 9th episode of build that app.This is 9th episode of build that app.This is 9th episode of build that app.This is 9th episode of build that app.This is 9th episode of build that app.")
+        
+        let tweet2 = Tweet(user: brian, message: "This is the second tweet for our sample project is the second tweet for our sample project is the second tweet for our sample project is the second tweet for our sample project is the second tweet for our sample project is the second tweet for our sample project is the second tweet for our sample project is the second tweet for our sample project ")
+        
+        let tweet3 = Tweet(user: brian, message: "This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project ")
+        
+        let tweet4 = Tweet(user: brian, message: "This is fourth tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project This is third tweet for our sample project ")
+        
+        return [tweet, tweet2, tweet3, tweet4]
+        
+    }()
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
@@ -33,6 +45,9 @@ class HomeDatasource: Datasource {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.item]
+        }
         return users[indexPath.item]
     }
     

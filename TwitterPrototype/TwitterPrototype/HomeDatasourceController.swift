@@ -37,7 +37,7 @@ class HomeDatasourceController: DatasourceController {
             return CGSize(width: view.frame.width, height: estimatedFrame.size.height + 66)
         }
         
-        return CGSize(width: view.frame.width, height: 200)
+        return CGSize(width: view.frame.width, height: 150)
     }
     
     
