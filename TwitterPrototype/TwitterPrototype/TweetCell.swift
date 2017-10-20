@@ -48,25 +48,25 @@ class TweetCell: DatasourceCell {
     
     let replyButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "reply"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "reply").withRenderingMode(.alwaysOriginal), for: .normal)
         return button
     }()
     
     let retweetButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "retweet"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "retweet").withRenderingMode(.alwaysOriginal), for: .normal)
         return button
     }()
     
     let likeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "like"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "like").withRenderingMode(.alwaysOriginal), for: .normal)
         return button
     }()
     
     let messageButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "send_message"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "send_message").withRenderingMode(.alwaysOriginal), for: .normal)
         return button
     }()
     
@@ -89,17 +89,9 @@ class TweetCell: DatasourceCell {
     
     fileprivate func setupBottomButtonsStackView() {
         let view1 = UIView()
-        view1.backgroundColor = .red
-        
         let view2 = UIView()
-        view2.backgroundColor = .green
-        
         let view3 = UIView()
-        view3.backgroundColor = .orange
-        
         let view4 = UIView()
-        view4.backgroundColor = .brown
-        
         let buttonStackView = UIStackView(arrangedSubviews: [view1, view2, view3, view4])
         buttonStackView.distribution = .fillEqually
         buttonStackView.axis = .horizontal
@@ -110,7 +102,7 @@ class TweetCell: DatasourceCell {
         addSubview(likeButton)
         addSubview(messageButton)
     
-        buttonStackView.anchor(nil, left: messageTextView.leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        buttonStackView.anchor(nil, left: messageTextView.leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 4, rightConstant: 0, widthConstant: 0, heightConstant: 20)
         
         replyButton.anchor(buttonStackView.topAnchor, left: view1.leftAnchor, bottom: buttonStackView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 0)
         retweetButton.anchor(buttonStackView.topAnchor, left: view2.leftAnchor, bottom: buttonStackView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 0)

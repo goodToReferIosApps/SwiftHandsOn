@@ -56,9 +56,8 @@ class HomeDatasourceController: DatasourceController {
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        
+        collectionViewLayout.invalidateLayout()
     }
-
     
     // MARK:- Private functions
     
