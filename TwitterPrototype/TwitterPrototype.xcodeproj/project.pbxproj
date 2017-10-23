@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B30398E01F9E93110038ACD7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30398DF1F9E93110038ACD7 /* Service.swift */; };
 		B36323111F9524E900EBB2EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36323101F9524E900EBB2EF /* User.swift */; };
 		B36323131F952E0000EBB2EF /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36323121F952E0000EBB2EF /* UserCell.swift */; };
 		B36323151F954ECE00EBB2EF /* HomeDatasourceController+setupNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36323141F954ECE00EBB2EF /* HomeDatasourceController+setupNavBar.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1CE05F6F29111E624EFA2D53 /* Pods-TwitterPrototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterPrototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterPrototype/Pods-TwitterPrototype.debug.xcconfig"; sourceTree = "<group>"; };
+		B30398DF1F9E93110038ACD7 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B36323101F9524E900EBB2EF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B36323121F952E0000EBB2EF /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B36323141F954ECE00EBB2EF /* HomeDatasourceController+setupNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+setupNavBar.swift"; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B30398DE1F9E93020038ACD7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B30398DF1F9E93110038ACD7 /* Service.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		B37695071F82CEFE0051E934 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		B37695121F82CEFE0051E934 /* TwitterPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				B30398DE1F9E93020038ACD7 /* Service */,
 				B3D338F41F842F9E005C0DBA /* View */,
 				B3D338F31F842F97005C0DBA /* Controller */,
 				B3D338F21F842F84005C0DBA /* Model */,
@@ -264,6 +275,7 @@
 				B3D338F11F8426F1005C0DBA /* HomeDatasourceController.swift in Sources */,
 				B36323151F954ECE00EBB2EF /* HomeDatasourceController+setupNavBar.swift in Sources */,
 				B37695141F82CEFE0051E934 /* AppDelegate.swift in Sources */,
+				B30398E01F9E93110038ACD7 /* Service.swift in Sources */,
 				B3D338F81F843000005C0DBA /* HomeDatasource.swift in Sources */,
 				B37695261F82D0380051E934 /* HomeController.swift in Sources */,
 				B36323171F9556FB00EBB2EF /* TweetCell.swift in Sources */,
