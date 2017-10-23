@@ -7,16 +7,28 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDatasource: Datasource {
+class HomeDatasource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let brian = User(name: "Brian", username: "@brian", bioText: "This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian ", profileImage: #imageLiteral(resourceName: "profile_image"))
-        let ray = User(name: "Ray", username: "@ray", bioText: "This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples This is ray, checkout the latest videos for swift programming samples.", profileImage: #imageLiteral(resourceName: "ray_profile_image"))
-        let kindleCourse = User(name: "Kindle", username: "@kindle", bioText: "This is kindle biotext", profileImage: #imageLiteral(resourceName: "profile_image"))
+    let users: [User]
+    
+    required init(json: JSON) throws {
         
-        return [brian, ray, kindleCourse]
-    }()
+        var users = [User]()
+        //print("Now ready to parse json: \n", json)
+        let usersArray = json["users"].array
+        for userJson in usersArray! {
+            let name = userJson["name"].stringValue
+            let userName = userJson["username"].stringValue
+            let bio = userJson["bio"].stringValue
+            
+            let user = User(name: name, username: userName, bioText: bio, profileImage: UIImage())
+            users.append(user)
+        }
+        self.users = users
+    }
     
     let tweets: [Tweet] = {
         let brian = User(name: "Brian", username: "@brian", bioText: "This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian This is biotext of brian ", profileImage: #imageLiteral(resourceName: "profile_image"))
