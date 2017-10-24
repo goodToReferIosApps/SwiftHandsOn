@@ -27,14 +27,14 @@ class TweetCell: DatasourceCell {
             attributedString.append(attributedMessage)
             
             messageTextView.attributedText = attributedString
+            profileImageView.loadImage(urlString: tweet.user.profileImageUrl)
         }
     }
     
-    let profileImageView: UIImageView = {
-        let imageView = UIImageView()
+    let profileImageView: CachedImageView = {
+        let imageView = CachedImageView()
         imageView.layer.cornerRadius = 5
         imageView.clipsToBounds = true
-        imageView.image = #imageLiteral(resourceName: "profile_image")
         return imageView
     }()
     

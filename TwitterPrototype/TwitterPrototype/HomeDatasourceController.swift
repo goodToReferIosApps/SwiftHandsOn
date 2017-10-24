@@ -53,18 +53,32 @@ class HomeDatasourceController: DatasourceController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if let user = self.datasource?.item(indexPath) as? User {
-            
-            let approxWidth = self.view.frame.width - 12 - 50 - 12 - 2
-            let estimatedSize = CGSize(width: approxWidth, height: 1000)
-            
-            let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
-            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: estimatedSize, options:.usesLineFragmentOrigin, attributes: attributes, context: nil)
-            return CGSize(width: view.frame.width, height: estimatedFrame.size.height + 66)
+        if indexPath.section == 0 {
+            // Estimated height for user cell
+            guard let user = self.datasource?.item(indexPath) as? User else {
+                return .zero
+            }
+            let estimatedHeight = estimatedHeightForText(user.bioText)
+            return CGSize(width: view.frame.width, height: estimatedHeight + 66)
+        } else if indexPath.section == 1 {
+            // Estimated height for tweet cell
+            guard let tweet = self.datasource?.item(indexPath) as? Tweet else {
+                return .zero
+            }
+            let estimatedHeight = estimatedHeightForText(tweet.message)
+            return CGSize(width: view.frame.width, height: estimatedHeight + 74)
         }
+        return .zero
+    }
+    
+    
+    private func estimatedHeightForText(_ text: String) -> CGFloat {
+        let approxWidth = self.view.frame.width - 12 - 50 - 12 - 2
+        let estimatedSize = CGSize(width: approxWidth, height: 1000)
         
-        return CGSize(width: view.frame.width, height: 150)
+        let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
+        let estimatedFrame = NSString(string: text).boundingRect(with: estimatedSize, options:.usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return estimatedFrame.size.height
     }
     
     
