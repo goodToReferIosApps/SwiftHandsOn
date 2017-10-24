@@ -17,11 +17,12 @@ class HomeDatasource: Datasource, JSONDecodable {
     
     required init(json: JSON) throws {
         
-        let usersJsonArray = json["users"].array
-        self.users = usersJsonArray!.map{ User(json: $0) }
+        guard let usersJsonArray = json["users"].array, let tweetJsonArray = json["tweets"].array else {
+            throw NSError(domain: "buildthatapp.con", code: 1, userInfo: [NSLocalizedDescriptionKey: "Json is not valid!"])
+        }
         
-        let tweetJsonArray = json["tweets"].array
-        self.tweets = tweetJsonArray!.map { Tweet(json: $0) }
+        self.users = usersJsonArray.map{ User(json: $0) }
+        self.tweets = tweetJsonArray.map { Tweet(json: $0) }
     }
     
     
