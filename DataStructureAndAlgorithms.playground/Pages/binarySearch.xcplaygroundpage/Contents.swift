@@ -1,5 +1,8 @@
 //: [Previous](@previous)
 
+
+// https://youtu.be/eX6oGfb5RSk
+// Code is from youtube channel lets build that app.
 import Foundation
 
 var str = "Hello, playground"
