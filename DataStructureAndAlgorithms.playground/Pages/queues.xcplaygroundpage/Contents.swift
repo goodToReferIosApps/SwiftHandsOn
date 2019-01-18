@@ -2,6 +2,8 @@
 
 import Foundation
 
+// tail(a)<-b<-c<-d(head)
+
 class Node {
     var value: Int
     var nextNode: Node?
