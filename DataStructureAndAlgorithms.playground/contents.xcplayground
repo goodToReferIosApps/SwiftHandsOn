@@ -19,5 +19,7 @@
         <page name='genericsRay'/>
         <page name='mergeSort'/>
         <page name='breadthFirstSearch'/>
+        <page name='PraticeCode'/>
+        <page name='NestedToFlattenArray'/>
     </pages>
 </playground>
